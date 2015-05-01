@@ -21,8 +21,11 @@ Goals:
 1. Responsive design: desktop, tablets, smart-phones
 
 Tasks:
-1. add twitter bootstrap
-1. Register form - bootstrap + AngularJS
-1. on click binding
-1. Registration REST service
+
+1. [V] **_add twitter bootstrap_**
+1. [V] **_Login form - bootstrap + AngularJS_**
+1. [V] **_on click binding_**
+1. [>] Registration REST service
 1. AngularJS model synchronization with REST services
+1. mongo db storing support - REST service based persistence
+
