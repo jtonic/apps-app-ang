@@ -1,6 +1,6 @@
 /**
-    * Created by jtonic on 01.05.2015.
-    */
+ * Created by jtonic on 01.05.2015.
+ */
 var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
 var wiredep = require('wiredep').stream;
@@ -12,7 +12,7 @@ var inject = require('gulp-inject');
 gulp.task('bower', function () {
     gulp.src('./views/index.html')
         .pipe(wiredep({}))
-        .pipe(gulp.dest('./views'))
+        .pipe(gulp.dest('./views'));
 });
 
 /**
@@ -39,4 +39,5 @@ gulp.task('web', function (cb) {
 gulp.task('injectdep', ['bower', 'inject']);
 
 // default task - $ gulp
-gulp.task('default', ['bower', 'web']);
+gulp.task('default', ['injectdep', 'web']);
+
