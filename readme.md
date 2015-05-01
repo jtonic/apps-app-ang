@@ -27,5 +27,15 @@ Tasks:
 1. [V] **_on click binding_**
 1. [V] **_REST service_**
 1. [V] **_AngularJS model synchronization with REST services_**
-    1. **_Login - HTTP POST_** 
-1. [>] mongo db storing support - REST service based persistence
+    
+    **_Login - HTTP POST_** 
+1. [V] **_mongo db storing support - REST service based persistence_**
+
+
+Testing:
+
+1. Test the REST service
+
+    $ curl -v -H "Content-Type: application/json" -X POST -d '{"username":"xyz","password":"xyz"}' http://localhost:3000/users
+1. Test the web application
+    http://localhost:3000
