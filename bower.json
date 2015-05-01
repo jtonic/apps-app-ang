@@ -1,0 +1,23 @@
+{
+  "name": "apps-app-ang",
+  "version": "0.0.1",
+  "authors": [
+    "jtonic <antonel.pazargic@gmail.com>"
+  ],
+  "description": "AP AngularJS based web application",
+  "keywords": [
+    "angularjs",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15"
+  }
+}
