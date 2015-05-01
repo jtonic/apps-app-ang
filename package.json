@@ -13,9 +13,10 @@
     "jade": "~1.9.2",
     "morgan": "~1.5.1",
     "serve-favicon": "~2.2.0",
+    "uuid": "^2.0.1"
   },
   "devDependencies": {
-    "gulp": "^3.8.11"
+    "gulp": "^3.8.11",
     "gulp-inject": "^1.2.0",
     "gulp-nodemon": "^2.0.3",
     "gulp-util": "^3.0.4",
