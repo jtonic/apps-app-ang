@@ -25,7 +25,7 @@ Tasks:
 1. [V] **_add twitter bootstrap_**
 1. [V] **_Login form - bootstrap + AngularJS_**
 1. [V] **_on click binding_**
-1. [>] Registration REST service
-1. AngularJS model synchronization with REST services
-1. mongo db storing support - REST service based persistence
-
+1. [V] **_REST service_**
+1. [V] **_AngularJS model synchronization with REST services_**
+    1. **_Login - HTTP POST_** 
+1. [>] mongo db storing support - REST service based persistence
