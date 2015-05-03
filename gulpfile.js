@@ -6,11 +6,13 @@ var nodemon = require('gulp-nodemon');
 var wiredep = require('wiredep').stream;
 var inject = require('gulp-inject');
 
+const dest = gulp.dest('./views');
+
 /**
  * To inject bower dependencies - js and css files
  */
 gulp.task('bower', function () {
-    gulp.src('./views/index.html')
+    gulp.src('./views/*.html')
         .pipe(wiredep({}))
         .pipe(gulp.dest('./views'));
 });
@@ -18,10 +20,21 @@ gulp.task('bower', function () {
 /**
  * To inject project dependencies - js and css files
  */
-gulp.task('inject', function () {
-    var src = gulp.src(['./public/javascripts/signin.js', './public/stylesheets/style.css']);
-    var target = gulp.src('./views/index.html', {read: "false"});
-    target.pipe(inject(src)).pipe(gulp.dest('./views'));
+gulp.task('inject-index', function () {
+    const signInSrc = gulp.src([
+        './public/javascripts/signin.js',
+        './public/stylesheets/style.css'
+    ]);
+    const signInTarget = gulp.src('./views/index.html', {read: "false"});
+    signInTarget.pipe(inject(signInSrc)).pipe(dest);
+});
+
+gulp.task('inject-users', function () {
+    const usersSrc = gulp.src([
+        './public/javascripts/users.js'
+    ]);
+    const usersTarget = gulp.src('./views/users.html', {read: "false"});
+    usersTarget.pipe(inject(usersSrc)).pipe(dest);
 });
 
 /**
@@ -35,8 +48,11 @@ gulp.task('web', function (cb) {
     })
 });
 
+// $ gulp injects
+gulp.task('injects', ['inject-index', 'inject-users']);
+
 // $ gulp injectdep
-gulp.task('injectdep', ['bower', 'inject']);
+gulp.task('injectdep', ['bower', 'injects']);
 
 // default task - $ gulp
 gulp.task('default', ['injectdep', 'web']);

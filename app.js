@@ -22,6 +22,7 @@ app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 app.use('/public',  express.static(__dirname + '/public'));
+app.use('/views',  express.static(__dirname + '/views'));
 
 app.use('/', routes);
 app.use('/users', users);

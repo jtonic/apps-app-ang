@@ -1,5 +1,6 @@
 var express = require('express');
 var uuid = require('uuid');
+var path = require('path');
 var mongoose = require('mongoose');
 //var async = require('async');
 var router = express.Router();
@@ -21,15 +22,14 @@ var LoginModel = mongoose.model('Login', LoginSchema);
 
 /* GET users listing. */
 router.get('/', function (req, res) {
-
+/*
     LoginModel.find({}, function (err, obj) {
         if (err)
             console.log('error occurred in the database');
         console.log("Found : " + JSON.stringify(obj));
     });
-
-    res.status(200).end();
-
+*/
+    res.sendFile(path.join(__dirname + '/../views/users.html'));
 });
 
 router.post('/', function (req, res) {
