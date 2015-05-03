@@ -28,10 +28,9 @@
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus ng-model="todo.email">
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required ng-model="todo.password">
-
-        <div class="checkbox">
+        <div class="checkbox-inline">
             <label>
-                <input type="checkbox" value="remember-me"> Remember me
+                <input type="checkbox" value="remember-me" ng-model="todo.remember_me"> Remember me!
             </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="submit()">Sign in</button>

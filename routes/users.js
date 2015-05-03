@@ -14,7 +14,8 @@ db.once('open', function callback() {
 
 var LoginSchema = mongoose.Schema({
     email: String,
-    password: String
+    password: String,
+    remember_me: Boolean
 }, {collection: "login"});
 var LoginModel = mongoose.model('Login', LoginSchema);
 
@@ -38,6 +39,7 @@ router.post('/', function (req, res) {
     var login = new LoginModel();
     login.email = loginReq.email;
     login.password = loginReq.password;
+    login.remember_me = loginReq.remember_me;
 
     console.log("Login model: " + login);
 
