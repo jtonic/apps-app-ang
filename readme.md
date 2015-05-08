@@ -20,6 +20,14 @@ The purpose of this application is to become familiar with JS frameworks and WEB
 1. Security: Server and client side
 1. Responsive design: desktop, tablets, smart-phones
 
+#### How to import the application:
+1. clone from github in $apps-app-ang
+    $ git clone https://github.com/jtonic/apps-app-ang.git
+1. cd $apps-app-ang
+1. fetch the nodejs modules locally
+    $ npm update
+
+
 #### Tasks:
 
 1. [V] **_add twitter bootstrap_**
