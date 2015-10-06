@@ -20,25 +20,39 @@ The purpose of this application is to become familiar with JS frameworks and WEB
 1. Security: Server and client side
 1. Responsive design: desktop, tablets, smart-phones
 
+
+#### Installation:
+1. Install nodejs (the npm is included in the nodejs installation)
+1. Install gulp
+    > npm install --global gulp
+1. Install bower
+    > npm install -g bower
+1. Fetch the bower dependencies
+    > bower update
+
 #### Tasks:
 
-1. [V] **_add twitter bootstrap_**
-1. [V] **_Login form - bootstrap + AngularJS_**
-1. [V] **_on click binding_**
-1. [V] **_REST service_**
-1. [V] **_AngularJS model synchronization with REST services_**
-    
-    **_Login - HTTP POST_** 
-1. [V] **_mongo db storing support - REST service based persistence_**
+1. **[V] add twitter bootstrap**
+1. **[V] Login form - bootstrap + AngularJS**
+1. **[V] on click binding**
+1. **[V] REST service**
+1. **[V] AngularJS model synchronization with REST services**
+1. **[V] Add KendoUI core dependency**
+1. **[V] A simple KendoUI dropBox example with REST service**
+1. **[V] Login - HTTP POST**
+1. **[V] mongo db storing support - REST service based persistence**
 
 
 #### Testing:
 
 1. Test the REST service
+   > $ curl -v -H "Content-Type: application/json" -X POST -d '{"username":"xyz","password":"xyz"}' http://localhost:3000/users
 
-    $ curl -v -H "Content-Type: application/json" -X POST -d '{"username":"xyz","password":"xyz"}' http://localhost:3000/users
+   > $ curl -v -H "Content-Type: application/json" http://localhost:3000/users/all
 1. Test the web application
-    http://localhost:3000
+   > http://localhost:3000
+
+   > http://localhost:3000/users
 
 #### Issues:
 

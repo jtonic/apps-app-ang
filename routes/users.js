@@ -22,14 +22,14 @@ var LoginModel = mongoose.model('Login', LoginSchema);
 
 /* GET users listing. */
 router.get('/', function (req, res) {
-/*
-    LoginModel.find({}, function (err, obj) {
-        if (err)
-            console.log('error occurred in the database');
-        console.log("Found : " + JSON.stringify(obj));
-    });
-*/
     res.sendFile(path.join(__dirname + '/../views/users.html'));
+});
+
+router.get('/all', function (req, res) {
+    res.send([
+        {id: "1", name: "Antonel Pazargic"},
+        {id: "2", name: "Irina Pazargic"}
+    ])
 });
 
 router.post('/', function (req, res) {
