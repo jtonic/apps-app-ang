@@ -22,7 +22,12 @@ The purpose of this application is to become familiar with JS frameworks and WEB
 
 
 #### Installation:
+1. clone from github in $apps-app-ang
+    > $ git clone https://github.com/jtonic/apps-app-ang.git
+1. $ cd $apps-app-ang
 1. Install nodejs (the npm is included in the nodejs installation)
+1. fetch the nodejs modules locally
+    > $ npm update
 1. Install gulp
     > npm install --global gulp
 1. Install bower
