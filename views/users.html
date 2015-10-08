@@ -4,22 +4,22 @@
     <title>AP application</title>
 
     <!-- bower:css -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
-
-    <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.common.min.css" />
-    <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="../web/public/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../web/public/bower_components/kendo-ui/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="../web/public/bower_components/kendo-ui/styles/kendo.default.min.css" />
 
     <!-- inject:css-->
     <!-- endinject -->
 
     <!-- bower:js -->
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/angular/angular.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="../bower_components/angular-resource/angular-resource.js"></script>
-    <script src="../bower_components/kendo-ui/js/kendo.ui.core.min.js"></script>
+    <script src="../web/public/bower_components/jquery/dist/jquery.js"></script>
+    <script src="../web/public/bower_components/angular/angular.js"></script>
+    <script src="../web/public/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../web/public/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../web/public/bower_components/kendo-ui/js/kendo.ui.core.min.js"></script>
     <!-- endbower -->
+    <script src="../web/public/bower_components/kendo-ui/js/kendo.angular.min.js"></script>
 
     <!-- inject:js -->
     <script src="/public/javascripts/users.js"></script>
@@ -66,6 +66,15 @@
         </div>
     </nav>
     <input id="dropdownlist" />
+    <div ng-app="apps-app-ang" ng-controller="app-controller">
+        <label>Birthday: <input kendo-date-picker ng-model="birthday"/></label>
+        <p>
+            Your selection is {{birthday}}
+        </p>
+        <!--<select kendo-multi-select k-options="selectOptions"></select>-->
+        <select kendo-multi-select k-options="selectOptions" k-ng-model="selectedIds" k-value-primitive="false"></select>
+        <p ng-show="selectedIds.length"><br />Selected: {{ selectedIds }}</p>
+    </div>
 </div>
 </body>
 </html>

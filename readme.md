@@ -1,5 +1,4 @@
 # AP WEB application    
-
 The purpose of this application is to become familiar with JS frameworks and WEB related languages/frameworks/tools etc:
 
 1. NodeJS
@@ -15,7 +14,7 @@ The purpose of this application is to become familiar with JS frameworks and WEB
 #### Goals:
 1. Single page application
 1. Nice looking theme - twitter bootstrap
-1. JS client MVC - AngularJS
+1. JS client MVC - AngularJS, KendoUI
 1. Data retrieval and storage - REST services
 1. Security: Server and client side
 1. Responsive design: desktop, tablets, smart-phones
@@ -36,7 +35,6 @@ The purpose of this application is to become familiar with JS frameworks and WEB
     > bower update
 
 #### Tasks:
-
 1. **[V] add twitter bootstrap**
 1. **[V] Login form - bootstrap + AngularJS**
 1. **[V] on click binding**
@@ -46,10 +44,9 @@ The purpose of this application is to become familiar with JS frameworks and WEB
 1. **[V] A simple KendoUI dropBox example with REST service**
 1. **[V] Login - HTTP POST**
 1. **[V] mongo db storing support - REST service based persistence**
-
+1. **[V] Kendo UI & AngularJS example**
 
 #### Testing:
-
 1. Test the REST service
    > $ curl -v -H "Content-Type: application/json" -X POST -d '{"username":"xyz","password":"xyz"}' http://localhost:3000/users
 
@@ -58,6 +55,15 @@ The purpose of this application is to become familiar with JS frameworks and WEB
    > http://localhost:3000
 
    > http://localhost:3000/users
+
+#### Things to take away
+1. > bower install package --save
+1. > bower list
+1. > bower cache list
+1. > bower cache clean
+
+#### IntelliJ Idea goodies
+1. AngularJS plugin - provided by Jetbrains team but not builtin.
 
 #### Issues:
 

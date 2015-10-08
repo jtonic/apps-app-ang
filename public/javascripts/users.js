@@ -8,11 +8,31 @@ main_app.controller("main_ctrl", function ($scope) {
     $scope.navbar = navbar_model;
 });
 
+var app = angular.module("apps-app-ang", [ "kendo.directives" ]).controller("app-controller", function ($scope) {
+    $scope.selectOptions = {
+        placeholder: "Select products...",
+        dataValueField: "id",
+        dataTextField: "name",
+        dataSource: {
+            transport: {
+                read: {
+                    url: "users/all",
+                    type: "get",
+                    dataType: "json"
+                }
+            }
+        }
+    };
+    $scope.selectedIds = [
+        {id: "1"},
+        {id: "2"}
+    ];
+});
+
 $(function () {
     var dataSource = new kendo.data.DataSource({
         transport: {
             read: {
-//                    url: "http://localhost:3000/users/all",
                 url: "users/all",
                 type: "get",
                 dataType: "json"
@@ -21,18 +41,11 @@ $(function () {
     });
 
     $("#dropdownlist").kendoDropDownList({
-        /*
-         dataSource: [
-         {id: "1", name: "Antonel"},
-         {id: "2", name: "Irina"}
-         ],
-
-         */
         dataSource: dataSource,
         filer: "contains",
         index: 0,
-        dataTextField: "name",
-        dataValueField: "id"
+        dataValueField: "id",
+        dataTextField: "name"
     });
 });
 

@@ -13,7 +13,9 @@ const dest = gulp.dest('./views');
  */
 gulp.task('bower', function () {
     gulp.src('./views/*.html')
-        .pipe(wiredep({}))
+        .pipe(wiredep({
+            bowerJson: require('./bower.json')
+        }))
         .pipe(gulp.dest('./views'));
 });
 
